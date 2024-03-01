@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^4.30.6",
+    "@zegocloud/zego-uikit-prebuilt": "^1.11.0",
     "apexcharts": "^3.41.0",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",

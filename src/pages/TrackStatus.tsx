@@ -3,8 +3,10 @@ import DefaultLayout from '../layout/DefaultLayout';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Calendar = () => {
+  const navigate = useNavigate();
   //Modal function that shows responce of doctor
 
   function MyVerticallyCenteredModal(props: any) {
@@ -46,6 +48,12 @@ const Calendar = () => {
             className="text-white bg-blue-700 rounded px-10 py-3 my-10"
           >
             Close
+          </Button>
+          <Button
+            onClick={()=>{navigate("/video-conferencing")}}
+            className="ml-2 text-white bg-blue-700 rounded px-10 py-3 my-10"
+          >
+            Video conferencing
           </Button>
         </Modal.Footer>
       </Modal>

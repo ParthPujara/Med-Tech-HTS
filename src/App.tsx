@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 //env file import
-import { config } from 'dotenv';
+import VideoConferencing from '../src/pages/VideoConferencing'
 
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
@@ -63,6 +63,16 @@ function App() {
               <PageTitle title="Track-Status" />
               
               <Calendar />
+            </>
+          }
+        />
+        <Route
+          path="/video-conferencing"
+          element={
+            <>
+              <PageTitle title="Video Conferencing" />
+              
+              <VideoConferencing/>
             </>
           }
         />
