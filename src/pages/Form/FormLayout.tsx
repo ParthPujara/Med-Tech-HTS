@@ -41,7 +41,7 @@ const FormLayout = () => {
             <form action="#">
               <div className="p-6.5">
                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
-                  <div className="w-full xl:w-1/2">
+                  {/* <div className="w-full xl:w-1/2">
                     <label className="mb-2.5 block text-black dark:text-white">
                       First name
                     </label>
@@ -50,9 +50,9 @@ const FormLayout = () => {
                       placeholder="Enter your first name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                     />
-                  </div>
+                  </div> */}
 
-                  <div className="w-full xl:w-1/2">
+                  {/* <div className="w-full xl:w-1/2">
                     <label className="mb-2.5 block text-black dark:text-white">
                       Last name
                     </label>
@@ -61,10 +61,10 @@ const FormLayout = () => {
                       placeholder="Enter your last name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                     />
-                  </div>
+                  </div> */}
                 </div>
 
-                <div className="mb-4.5">
+                {/* <div className="mb-4.5">
                   <label className="mb-2.5 block text-black dark:text-white">
                     Email <span className="text-meta-1">*</span>
                   </label>
@@ -73,7 +73,7 @@ const FormLayout = () => {
                     placeholder="Enter your email address"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                   />
-                </div>
+                </div> */}
 
                 <div className="mb-4.5">
                   <label className="mb-2.5 block text-black dark:text-white">
@@ -89,6 +89,7 @@ const FormLayout = () => {
                       className="form-datepicker w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
                       placeholder="mm/dd/yyyy"
                       data-class="flatpickr-right"
+                      name='dateOfBirth'
                     />
 
                     <div className="pointer-events-none absolute inset-0 left-auto right-5 flex items-center">
@@ -180,6 +181,7 @@ const FormLayout = () => {
                       Patient's Weight (kg's)
                     </label>
                     <input
+                    name='patientWeight'
                       type="text"
                       placeholder="Enter your first name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -191,18 +193,36 @@ const FormLayout = () => {
                       Patient Height (cm's)
                     </label>
                     <input
+                    name='patientHeight'
                       type="text"
                       placeholder="Enter your last name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                     />
                   </div>
                 </div>
+{/* =================== */}
+              <div className="mb-6">
+                  <label className="mb-2.5 block text-black dark:text-white">
+                    What is your current symptoms?
+                  </label>
+                  <textarea
+                  name='currentSymptoms'
+                    rows={3}
+                    placeholder="Current Symptoms"
+                    className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                  ></textarea>
+                </div>
+
+
+
+
 
                 <div className="mb-6">
                   <label className="mb-2.5 block text-black dark:text-white">
                     Summary of your medical history
                   </label>
                   <textarea
+                  name='medicalHistory'
                     rows={6}
                     placeholder="Your medical history"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -214,6 +234,7 @@ const FormLayout = () => {
                     List drug allergies (if any)
                   </label>
                   <textarea
+                  name='drugAllergies'
                     rows={3}
                     placeholder="Your drug allergies"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -229,6 +250,7 @@ const FormLayout = () => {
                     Other illness (if any)
                   </label>
                   <input
+                  name='otherIllness'
                     type="text"
                     placeholder="Select subject"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -240,6 +262,7 @@ const FormLayout = () => {
                     List your current medications
                   </label>
                   <textarea
+                  name='Medication'
                     rows={3}
                     placeholder="Your medications"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
