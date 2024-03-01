@@ -1,10 +1,57 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import Breadcrumb from '../../components/Breadcrumbs/Breadcrumb';
 import DefaultLayout from '../../layout/DefaultLayout';
 import flatpickr from 'flatpickr';
 import MultiSelect from '../../components/Forms/MultiSelect';
+// import React, { useState, useEffect, useRef } from 'react';
+
 
 const FormLayout = () => {
+
+  const [formData, setFormData] = useState({
+    dateOfBirth: '',
+    gender: '',
+    patientWeight: '',
+    patientHeight: '',
+    currentSymptoms: '',
+    medicalHistory: '',
+    drugAllergies: '',
+    otherIllness: '',
+    medication: ''
+  });
+
+  const handleSubmit = async (event:any) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('http://35.202.201.225:8000/completeProfile', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        // Handle success
+        console.log('Data submitted successfully');
+      } else {
+        // Handle errors
+        console.error('Failed to submit data');
+      }
+    } catch (error) {
+      console.error('Error submitting data:', error);
+    }
+  };
+
+  const handleInputChange = (event:any) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
   const [selectedOption, setSelectedOption] = useState<string>('');
   const [isOptionSelected, setIsOptionSelected] = useState<boolean>(false);
 
@@ -38,7 +85,7 @@ const FormLayout = () => {
                 Your medication details form
               </h3>
             </div>
-            <form action="#">
+            <form action="#" onSubmit={handleSubmit}>
               <div className="p-6.5">
                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
                   {/* <div className="w-full xl:w-1/2">
@@ -90,6 +137,7 @@ const FormLayout = () => {
                       placeholder="mm/dd/yyyy"
                       data-class="flatpickr-right"
                       name='dateOfBirth'
+                      onChange={handleInputChange}
                     />
 
                     <div className="pointer-events-none absolute inset-0 left-auto right-5 flex items-center">
@@ -121,6 +169,7 @@ const FormLayout = () => {
                       onChange={(e) => {
                         setSelectedOption(e.target.value);
                         changeTextColor();
+                        
                       }}
                       className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-5 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary ${
                         isOptionSelected ? 'text-black dark:text-white' : ''
@@ -130,24 +179,28 @@ const FormLayout = () => {
                         value=""
                         disabled
                         className="text-body dark:text-bodydark"
+                        onChange={handleInputChange}
                       >
                         Select your gender
                       </option>
                       <option
                         value="Male"
                         className="text-body dark:text-bodydark"
+                        onChange={handleInputChange}
                       >
                         Male
                       </option>
                       <option
                         value="Female"
                         className="text-body dark:text-bodydark"
+                        onChange={handleInputChange}
                       >
                         Female
                       </option>
                       <option
                         value="Other"
                         className="text-body dark:text-bodydark"
+                        onChange={handleInputChange}
                       >
                         Other
                       </option>
@@ -185,6 +238,8 @@ const FormLayout = () => {
                       type="text"
                       placeholder="Enter your first name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    
+                      onChange={handleInputChange}
                     />
                   </div>
 
@@ -197,6 +252,7 @@ const FormLayout = () => {
                       type="text"
                       placeholder="Enter your last name"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                      onChange={handleInputChange}
                     />
                   </div>
                 </div>
@@ -206,6 +262,7 @@ const FormLayout = () => {
                     What is your current symptoms?
                   </label>
                   <textarea
+                  onChange={handleInputChange}
                   name='currentSymptoms'
                     rows={3}
                     placeholder="Current Symptoms"
@@ -222,6 +279,7 @@ const FormLayout = () => {
                     Summary of your medical history
                   </label>
                   <textarea
+                  onChange={handleInputChange}
                   name='medicalHistory'
                     rows={6}
                     placeholder="Your medical history"
@@ -234,6 +292,7 @@ const FormLayout = () => {
                     List drug allergies (if any)
                   </label>
                   <textarea
+                  onChange={handleInputChange}
                   name='drugAllergies'
                     rows={3}
                     placeholder="Your drug allergies"
@@ -241,8 +300,9 @@ const FormLayout = () => {
                   ></textarea>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6" >
                   <MultiSelect id="multiSelect" />
+        
                 </div>
 
                 <div className="mb-4.5">
@@ -250,6 +310,7 @@ const FormLayout = () => {
                     Other illness (if any)
                   </label>
                   <input
+                  onChange={handleInputChange}
                   name='otherIllness'
                     type="text"
                     placeholder="Select subject"
@@ -263,6 +324,7 @@ const FormLayout = () => {
                   </label>
                   <textarea
                   name='Medication'
+                  onChange={handleInputChange}
                     rows={3}
                     placeholder="Your medications"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"

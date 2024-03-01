@@ -100,7 +100,7 @@ const MultiSelect: React.FC<DropdownProps> = ({ id }) => {
       </label>
       <div>
         <select className="hidden" id={id}>
-          <option value="1">Anemia</option>
+          <option  value="1">Anemia</option>
           <option value="2">Asthama</option>
           <option value="3">Arthritis</option>
           <option value="4">Cancer</option>
