@@ -18,7 +18,7 @@ const Doctors = (props) => {
         <Col md={6} lg={6} xl={4} xs={12}>
             <div className="single-feature-box sigle-doctor">
                 <div className="doctors-profile" data-aos="fade-down">
-                    <img src={img} alt="" />
+                    <img src={img}  alt="" />
                 </div>
                 <div className="doctors-info" data-aos="fade-left">
                     <h3 className="mb-0"><a href=".#">{name}</a></h3>

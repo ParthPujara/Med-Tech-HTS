@@ -2,8 +2,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import donto from '../../../Images/about-banner1.png';
+// import donto from '../../../Images/about-banner1.png';
 import dontoAnimated from '../../../Images/cleaner.png';
+import hospital from '../../../Images/Hospital.png';
+import patientanim from '../../../Images/Hospital-patient-anim.png'
+import ambulance from '../../../Images/ambulance.png'
 import './About.css';
 
 const About = () => {
@@ -20,20 +23,20 @@ const About = () => {
                 <Row>
                     <Col md={12} lg={6}>
                         <div className="about-left">
-                            <img src={donto} alt="donto" className="img-fluid donto" />
-                            <img src={dontoAnimated} alt="donto" className="img-fluid animated dontoAnim" />
+                            <img src={hospital} alt="donto" className="img-fluid donto" />
+                            <img src={ambulance} style={{height:'15rem'}} alt="donto" className="img-fluid animated dontoAnim" />
                         </div>
                     </Col>
                     <Col md={12} lg={6}>
                         <div className="about-right mt-5 mt-lg-0">
                             <div className="about-content text-start" data-aos="zoom-in">
-                                <h1>Welcome to a Family</h1>
-                                <p>Welcome to Datobbo Dental represents everything going to dentist necessary. We have upgraded your dreaded dentist appointment and transformed it into a relaxing. Consectetur adipisicing elit. Quod ea, consequuntur itaque enim et expedita, optio omnis ipsa magni, perspiciatis totam ipsum! Voluptatibus, neque at.</p>
+                                <h1> Embrace Healing with Us</h1>
+                                <p>Step into a community of care and compassion at [Hospital Name]. Here, we don't just treat patients; we welcome you into our hospital family. From the first handshake to the last goodbye, you'll experience the genuine warmth and dedication that defines our institution. At [Hospital Name], we believe in the power of connection – the bond between caregiver and patient, the support of fellow community members, and the strength found in unity. No matter your medical needs, rest assured that you're in capable hands. Together, let's build a healthier, happier tomorrow.</p>
                                 <a href='/page/about'>About Us</a>
                             </div>
                             <div className="fun-fact-sec" data-aos="fade-right">
                                 <div className="single-fun">
-                                    <span>500</span>
+                                    <span>22000+</span>
                                     <span>+</span>
                                     <p>Happy Patients</p>
                                 </div>

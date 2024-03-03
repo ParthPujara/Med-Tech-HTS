@@ -15,15 +15,16 @@ const Home = () => {
 
     return (
         <>
+       
            <Banner />
            <Feature />
            <About />
            <Service />
            <Dentist />
            <Appoinment />
-           <Gallery />
+           {/* <Gallery /> */}
            <Testimonial />
-           <LatestBlog />
+           {/* <LatestBlog /> */}
            <Promo />
            <Slick />
         </>

@@ -1,11 +1,14 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import brushMan from '../../../Images/brushman.png';
-import HeroMainbg from '../../../Images/hero-main-bg.png';
+import HeroMainBg1 from '../../../Images/HeroMainBg1.png';
 import injectTool from '../../../Images/inject-tool.png';
 import inject from '../../../Images/injection.png';
 import staircaseMan from '../../../Images/staircase.png';
+import computer from '../../../Images/Computerdesk.png'
+import patientDesk from '../../../Images/Hospital-patient-anim.png'
 import './Banner.css';
+
 const Banner = () => {
     return (
         <section className="banner-all text-white">
@@ -16,18 +19,19 @@ const Banner = () => {
                             <h1>About Us</h1>
                         </div>
                         <div className="breadcrumb-nav">
-                            <a href="/" className="text-decoration-none text-white">Home Page</a>
-                            <span href="/" className="text-decoration-none text-white ml-2">About Us</span>
+                            <a href="/" className="text-decoration-none text-white border p-2 rounded">Home Page</a>
+
+                            {/* <span href="/" className="text-decoration-none text-white border p-2 rounded ml-2 cursor-pointer"> About Us</span>   */}
                         </div>
                     </Col>
                     <Col md={6} lg={6} sm={12}>
-                        <div className="hero-slide-right text-start">
+                        <div className="hero-slide-right text-start"style={{marginLeft:'7rem'}} >
                             <div className="banner-animate">
-                                <img src={HeroMainbg} alt="" className="img-fluid" />
-                                <img src={staircaseMan} alt="" className="img-fluid a2" />
-                                <img src={brushMan} alt="" className="img-fluid a3" />
-                                <img src={inject} alt="" className="img-fluid a4" />
-                                <img src={injectTool} alt="" className="img-fluid a5" />
+                                <img src={HeroMainBg1} style={{height:'20rem'}} alt=""   className="img-fluid" />
+                                <img  src={computer}style={{height:200,left:'200px'}} alt=""   className="img-fluid a2" />
+                                <img  alt=""   className="img-fluid a3" />
+                                <img src={patientDesk} style={{height:200, left:'-148px', top:'5rem'}} alt=""   className="img-fluid a4" />
+                                <img alt=""   className="img-fluid a5" />
                             </div>
                         </div>
                     </Col>

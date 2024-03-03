@@ -1,6 +1,8 @@
 .banner-all {
     padding: 70px 0 50px 0;
-    background-color: #004caa;
+    background:linear-gradient(#55eab8,#2b6cc4);
+    height: 50vh;
+    
 }
 
 .banner-animate {

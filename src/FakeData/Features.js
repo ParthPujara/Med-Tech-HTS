@@ -2,19 +2,19 @@ export const FakeFeatures = [
     {
         "id": "001",
         "title": "Easy Appointment",
-        "description": "Lorem Ipsum is simply is very dummy text of the printings and type setting",
-        "img": "https://raw.githubusercontent.com/saifulemon/images-for-all-project/main/Donto/Features/feature1.svg"
+        "description": "Simplify your healthcare journey with hassle-free appointments",
+        "img": "https://cdn-icons-png.freepik.com/256/7061/7061954.png?uid=R139827127&ga=GA1.2.1903043144.1709119216&"
     },
     {
         "id": "002",
-        "title": "Emergency Service",
-        "description": "Get our text demo is simply dummy text of the printings and type for content",
-        "img": "https://raw.githubusercontent.com/saifulemon/images-for-all-project/main/Donto/Features/feature2.svg"
+        "title": "AI Diagnostics",
+        "description": "Precision healthcare through AI-driven analysis.",
+        "img": "https://cdn-icons-png.freepik.com/256/5719/5719183.png?uid=R139827127&ga=GA1.2.1903043144.1709119216&"
     },
     {
         "id": "003",
         "title": "24/7 Service",
-        "description": "Lorem Ipsum is simply is very dummy text of the printings and type setting",
+        "description": "Round-the-clock care for your peace of mind",
         "img": "https://raw.githubusercontent.com/saifulemon/images-for-all-project/main/Donto/Features/feature3.svg"
     }
 ]

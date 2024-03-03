@@ -1,7 +1,8 @@
 .service-wrapper {
-    background: #004caa !important;
+    background:linear-gradient(#1a4f98,#1a4f98,#55eab8) !important;
+    
     padding: 120px 0;
-    color: #fff;
+    color: #2b2929;
 }
 
 .section-title {
@@ -15,23 +16,29 @@
 }
 
 .single-service-box {
-    border: 1px solid #3672bc;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 60px 47px 70px;
     margin-top: 30px;
     transition: .5s;
-    background: transparent;
+    /* background: transparent; */
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    
 }
 
 .single-service-box:hover {
-    background: #1259b0;
+    background: white;
     cursor: cell;
     border-color: transparent;
 }
 
 .service-icon {
     margin-bottom: 44px;
+
+}
+.service-icon img{
+    height: 5rem;
 }
 
 .single-service-box h3 {
@@ -42,12 +49,12 @@
 }
 
 .single-service-box p {
-    color: #d7d3d3!important;
+    color: #313131!important;
     font-family: 'Roboto Slab', serif;
 }
 
 .single-service-box a {
-    color: #fff !important;
+    color: #2d2d2d !important;
 }
 
 .single-service-box a:hover {

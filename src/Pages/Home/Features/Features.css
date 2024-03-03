@@ -26,6 +26,7 @@
 .icon-box img {
     display: inline-block;
     margin: 0 auto;
+    height: 5rem;
 }
 
 .single-feature-box h3 {

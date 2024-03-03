@@ -15,10 +15,10 @@ const Achivement = () => {
                             <h1>Our Achievement</h1>
                         </div>
                         <div className="achivement-txt">
-                            <p className="w-75">Smiling comes naturally to Dr. Harrie, author of ‘Donto’. He has embraced Cosmetic Dentistry and has redesigned the smiles for thev thousands of patients.</p>
+                            <p className="w-75">Smiling comes naturally to our DOctors, author of careEase. He has embraced Cosmetic Dentistry and has redesigned the smiles for thev thousands of patients.</p>
                             <div className="more-tool">
                             <Link to="/login"><button  className="theme-btn btn-fill">Appoinment</button></Link>
-                            <a href="https://www.youtube.com/watch?v=7HhdN9_MgE8" className="watchBtn"><button className="theme-btn btn-unfill"><FontAwesomeIcon className="play-btn" icon={faPlayCircle} /><span>Watch Vedio</span></button></a>
+                            
                             </div>
                         </div>
                     </Col>
@@ -26,14 +26,14 @@ const Achivement = () => {
                         <Row className="achivement-funfact text-white">
                             <Col sm={6} className="text-center">
                                 <div className="single-funfact">
-                                    <span>22 +</span>
+                                    <span>22000+</span>
                                     <p>Patients</p>
                                 </div>
                             </Col>
                             <Col sm={6} className="text-center">
                                 <div className="single-funfact">
                                     <span>75 +</span>
-                                    <p>Dentist</p>
+                                    <p>Doctors</p>
                                 </div>
                             </Col>
                             <Col sm={6} className="text-center">

@@ -5,7 +5,7 @@ import About from './Pages/About/About/About';
 import Approved from './Pages/Approved/Approved';
 import Contact from './Pages/Contact/Contact/Contact';
 import Dentist from './Pages/Dentist/Denitst/Dentist';
-import Footer from './Pages/Home/Footer/Footer.jsx';
+
 import Header from './Pages/Home/Header/Header.jsx';
 import Home from './Pages/Home/Home/Home.jsx';
 import Login from './Pages/Login/Login';
@@ -29,7 +29,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </AuthProvider>
     </div>

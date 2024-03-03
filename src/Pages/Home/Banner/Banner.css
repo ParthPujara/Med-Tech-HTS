@@ -1,5 +1,5 @@
 .single-hero-slide {
-    background-color: #004caa;
+    background:linear-gradient(#55eab8,#2b6cc4,#2b6cc4);
     padding-top: 200px;
     padding-bottom: 220px;
     font-family: "Josefin Sans", sans-serif;
@@ -38,6 +38,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
+    
 }
 
 .theme-btn {
@@ -83,7 +84,8 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 22;
+    z-index: 0;
+    
 }
 
 .animate-img .aimg1 {
@@ -93,6 +95,9 @@
     animation-delay: 100ms;
     animation-direction: alternate;
     bottom: 15px;
+    height: 20rem;
+    
+   
 }
 
 .animate-img .aimg2 {
@@ -134,8 +139,8 @@
 @media (max-width: 992px) {
     /* banner */
     .animate-img .aimg1 {
-        left: -25px;
-        top: 381px;
+        left: -150px;
+        top: 731px;
     }
 
     .animate-img .aimg2 {
@@ -151,8 +156,8 @@
 @media (max-width: 769px) {
     /* banner */
     .animate-img .aimg1 {
-        left: -25px;
-        top: 381px;;
+        left: -167px;
+        top: 671px;
     }
 
     .animate-img .aimg2 {
@@ -171,7 +176,7 @@
     /* banner */
     .animate-img .aimg1 {
         left: -92px;
-        top: 605px;
+        top: 757px;
     }
 
     .animate-img .aimg2 {
@@ -197,7 +202,7 @@
     /* banner */
     .animate-img .aimg1 {
         left: -88px;
-        top: 799px;
+        top: 846px;
     }
 
     .animate-img .aimg2 {
@@ -240,7 +245,7 @@
     }
 
     .animate-img .aimg1 {
-        top: 597px;
+        top: 709px;
         left: -72px;
     }
 

@@ -28,7 +28,7 @@ const ContactUs = () => {
                             </div>
                             <div className="c-info text-start">
                                 <h4>Email</h4>
-                                <p>info@dentzone.com</p>
+                                <p>info@CareEase.com</p>
                                 <p>email@gmail.com</p>
                             </div>
                         </div>
